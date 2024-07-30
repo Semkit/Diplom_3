@@ -20,6 +20,7 @@ class BasePage:
         element.click()
 
     @allure.step('Ожидание исчезновения элемента со страницы по локатору')
+    @allure.description('Функция необходима для ожидания исчезновения оверлея бразуера Firefox.')
     def wait_for_overlay_to_be_invisible(self):
         WebDriverWait(self.driver, 20).until_not(EC.visibility_of_element_located(BasePageLocators.MAIN_LAYOUT))
 

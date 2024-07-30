@@ -46,7 +46,7 @@ def create_user_and_delete_user():
         password = ''.join(str(random.randint(0, 9)) for i in range(length))
         return password
 
-    # Постоянный пользователь в системе:
+    # Постоянный пользователь в системе для отладки:
     cred_login = 'NikitaSemenov7251@yandex.com'
     cred_pass = '93585982'
 
