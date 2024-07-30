@@ -8,7 +8,8 @@ from selenium.webdriver.support.wait import WebDriverWait
 
 class OrderFeedPage(BasePage):
 
-
+    def __init__(self, driver):
+        self.driver = driver
     @allure.step('Нажимаем на кнопку Закрыть окно информации о заказе после оформления заказа')
     def order_details_close_button_click(self):
         self.click_element(OrderFeedPageLocators.CLOSE_ORDER_INFO)
